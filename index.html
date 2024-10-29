@@ -1,0 +1,312 @@
+<html><head><base href="https://example.com/">
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Cyber Security Analyst</title>
+        <style>
+            :root {
+                --primary: #1a1a1a;
+                --accent: #00ff00;
+                --text: #ffffff;
+            }
+    
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Courier New', monospace;
+            }
+    
+            body {
+                background-color: var(--primary);
+                color: var(--text);
+                line-height: 1.6;
+            }
+    
+            .profile-section {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                padding: 3rem;
+                flex-wrap: wrap;
+            }
+    
+            .profile-image {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                border: 3px solid var(--accent);
+                overflow: hidden;
+                position: relative;
+                box-shadow: 0 0 20px var(--accent);
+            }
+    
+            .profile-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    
+            .profile-image::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(0, 255, 0, 0.2),
+                    transparent
+                );
+                animation: shine 3s infinite;
+            }
+    
+            @keyframes shine {
+                to {
+                    left: 100%;
+                }
+            }
+    
+            .profile-info {
+                max-width: 500px;
+            }
+    
+            body {
+                background-color: var(--primary);
+                color: var(--text);
+                line-height: 1.6;
+            }
+    
+            .matrix-bg {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                opacity: 0.1;
+            }
+    
+            header {
+                padding: 2rem;
+                text-align: center;
+                border-bottom: 2px solid var(--accent);
+            }
+    
+            .glitch-text {
+                font-size: 3rem;
+                color: var(--accent);
+                text-shadow: 2px 2px 4px rgba(0, 255, 0, 0.5);
+                animation: glitch 1s infinite;
+            }
+    
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+    
+            .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin-top: 2rem;
+            }
+    
+            .skill-card {
+                background: rgba(0, 0, 0, 0.7);
+                border: 1px solid var(--accent);
+                padding: 1.5rem;
+                border-radius: 8px;
+                transition: transform 0.3s;
+            }
+    
+            .skill-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 0 15px var(--accent);
+            }
+    
+            .projects {
+                margin-top: 4rem;
+            }
+    
+            .security-stats {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 2rem;
+                flex-wrap: wrap;
+            }
+    
+            .stat-item {
+                text-align: center;
+                padding: 1rem;
+            }
+    
+            @keyframes glitch {
+                0% { transform: translate(0) }
+                20% { transform: translate(-2px, 2px) }
+                40% { transform: translate(-2px, -2px) }
+                60% { transform: translate(2px, 2px) }
+                80% { transform: translate(2px, -2px) }
+                100% { transform: translate(0) }
+            }
+    
+            footer {
+                text-align: center;
+                padding: 2rem;
+                margin-top: 4rem;
+                border-top: 2px solid var(--accent);
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="matrix" class="matrix-bg"></canvas>
+    
+        <header>
+            <h1 class="glitch-text">Analista de Cyber Security</h1>
+        </header>
+    
+        <div class="container">
+            <section class="profile-section">
+                <div class="profile-image">
+                    <img alt="Foto de perfil profissional do analista de cyber security" src="profile-placeholder.jpg" width="300" height="300">
+                </div>
+                <div class="profile-info">
+                    <h2>Sobre Mim</h2>
+                    <p>Como Analista de Cyber Security, dedico-me a proteger sistemas e dados contra ameaças digitais. Com experiência em análise de vulnerabilidades, resposta a incidentes e implementação de soluções de segurança, trabalho para garantir a integridade e confidencialidade das informações.</p>
+                </div>
+            </section>
+    
+            <section class="skills-grid">
+                <div class="skill-card">
+                    <h3>Análise de Segurança</h3>
+                    <ul>
+                        <li>Análise de Vulnerabilidades</li>
+                        <li>Pentesting</li>
+                        <li>Gestão de Riscos</li>
+                        <li>Resposta a Incidentes</li>
+                        <li>Forense Digital</li>
+                    </ul>
+                </div>
+    
+                <div class="skill-card">
+                    <h3>Ferramentas & Tecnologias</h3>
+                    <ul>
+                        <li>Nmap, Wireshark, Metasploit</li>
+                        <li>Kali Linux</li>
+                        <li>Firewalls & IDS/IPS</li>
+                        <li>SIEM</li>
+                        <li>Análise de Malware</li>
+                    </ul>
+                </div>
+    
+                <div class="skill-card">
+                    <h3>Certificações</h3>
+                    <ul>
+                        <li>CompTIA Security+</li>
+                        <li>CEH</li>
+                        <li>CISSP</li>
+                        <li>ISO 27001</li>
+                        <li>LGPD</li>
+                    </ul>
+                </div>
+            </section>
+    
+            <section class="security-stats">
+                <div class="stat-item">
+                    <h3>Vulnerabilidades Identificadas</h3>
+                    <p id="vulnCount">0</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Sistemas Protegidos</h3>
+                    <p id="systemCount">0</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Projetos Seguros Entregues</h3>
+                    <p id="projectCount">0</p>
+                </div>
+            </section>
+        </div>
+    
+        <footer>
+            <p>Conecte-se comigo nas redes profissionais</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/" target="_blank">GitHub</a>
+            </div>
+        </footer>
+    
+        <script>
+            // Matrix Rain Effect
+            const canvas = document.getElementById('matrix');
+            const ctx = canvas.getContext('2d');
+    
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+    
+            const letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ'.split('');
+            const fontSize = 10;
+            const columns = canvas.width/fontSize;
+            const drops = [];
+    
+            for(let x = 0; x < columns; x++)
+                drops[x] = 1; 
+    
+            function draw() {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                ctx.fillStyle = '#0F0';
+                ctx.font = fontSize + 'px arial';
+    
+                for(let i = 0; i < drops.length; i++) {
+                    const text = letters[Math.floor(Math.random() * letters.length)];
+                    ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+                    
+                    if(drops[i]*fontSize > canvas.height && Math.random() > 0.975)
+                        drops[i] = 0;
+                    
+                    drops[i]++;
+                }
+            }
+    
+            setInterval(draw, 33);
+    
+            // Contador animado
+            function animateValue(id, start, end, duration) {
+                const obj = document.getElementById(id);
+                const range = end - start;
+                const minTimer = 50;
+                const stepTime = Math.abs(Math.floor(duration / range));
+                const startTime = new Date().getTime();
+                const endTime = startTime + duration;
+                let timer;
+    
+                function run() {
+                    const now = new Date().getTime();
+                    const remaining = Math.max((endTime - now) / duration, 0);
+                    const value = Math.round(end - (remaining * range));
+                    obj.innerHTML = value;
+                    if (value == end) {
+                        clearInterval(timer);
+                    }
+                }
+    
+                timer = setInterval(run, stepTime);
+                run();
+            }
+    
+            // Iniciar contadores quando a página carregar
+            window.onload = function() {
+                animateValue("vulnCount", 0, 150, 2000);
+                animateValue("systemCount", 0, 50, 2000);
+                animateValue("projectCount", 0, 75, 2000);
+            }
+        </script>
+    </body>
+    </html>
